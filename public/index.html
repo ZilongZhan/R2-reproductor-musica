@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script type="module" src="/js/index.js"></script>
+  <title>Playlist</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="player-container">
+      <audio controls class="player"></audio>
+      <div class="current-song">
+        <span class="current-song__title"></span>
+      </div>
+    </div>
+    <div class="playlist">
+      <form class="form">
+        <label for="title">Nueva canción: </label>
+        <select class="form__control" id="title">
+          <option value="">Elige canción</option>
+        </select>
+        <button type="submit" class="button">Añadir</button>
+      </form>
+      <span class="error"></span>
+      <h1>Playlist:</h1>
+      <span class="total">0</span> canciones
+      <ul class="songs">
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

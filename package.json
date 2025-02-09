@@ -1,0 +1,19 @@
+{
+  "name": "launch-music-player",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "serve public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "serve": "^14.2.4",
+    "typescript": "^5.7.3"
+  }
+}

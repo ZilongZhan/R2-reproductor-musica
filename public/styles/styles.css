@@ -1,0 +1,111 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+select,
+input,
+button {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.error {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  color: red;
+  text-align: center;
+}
+
+.form__control,
+.button {
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.5rem;
+}
+
+.form__control {
+  width: 297px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.playlist {
+  width: 500px;
+  height: 504px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.songs {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.song {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current-song__title {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #f500b7;
+  font-weight: bold;
+  animation: changeColor 15s infinite;
+}
+
+@keyframes changeColor {
+  0% {
+    color: #f500b7;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  75% {
+    color: orange;
+  }
+  100% {
+    color: purple;
+  }
+}
