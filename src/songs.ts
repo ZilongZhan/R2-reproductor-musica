@@ -42,9 +42,9 @@ export const getNextSongPosition = (
   songs: Song[],
   currentSongPosition: number
 ) => {
-  const songIndex = songs.length - 1;
+  const currentSongIndex = currentSongPosition + 1;
 
-  if (currentSongPosition === songIndex) {
+  if (currentSongIndex === songs.length) {
     return 0;
   }
 
