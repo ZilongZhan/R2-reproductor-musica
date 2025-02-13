@@ -7,7 +7,9 @@ export const areSameSong = (song: Song, songTitle: string): boolean => {
 };
 
 export const addSong = (song: Song, songs: Song[]): void => {
-  songs.push(song);
+  if (song) {
+    songs.push(song);
+  }
 };
 
 export const isPlaylistFull = (songs: Song[]): boolean => {
