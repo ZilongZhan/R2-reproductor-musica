@@ -1,7 +1,9 @@
 import { Song } from "./songsData";
 
 export const areSameSong = (song: Song, songTitle: string): boolean => {
-  return song.title === songTitle;
+  const areSame = song.title === songTitle;
+
+  return areSame;
 };
 
 export const addSong = (song: Song, songs: Song[]): void => {
@@ -10,8 +12,9 @@ export const addSong = (song: Song, songs: Song[]): void => {
 
 export const isPlaylistFull = (songs: Song[]): boolean => {
   const maxPlaylistLength = 4;
+  const isFull = songs.length >= maxPlaylistLength;
 
-  return songs.length >= maxPlaylistLength;
+  return isFull;
 };
 
 export const getErrorMessage = (errorCode: string): string => {
@@ -27,7 +30,9 @@ export const getErrorMessage = (errorCode: string): string => {
 };
 
 export const getSongsCount = (songs: Song[]): number => {
-  return songs.length;
+  const songsCount = songs.length;
+
+  return songsCount;
 };
 
 export const removeSongByPosition = (songs: Song[], position: number): void => {
@@ -43,14 +48,17 @@ export const getNextSongPosition = (
   currentSongPosition: number
 ) => {
   const lastSongIndex = songs.length - 1;
+  let nextSongPosition = currentSongPosition + 1;
 
   if (currentSongPosition === lastSongIndex) {
-    return 0;
+    nextSongPosition = 0;
   }
 
-  return currentSongPosition + 1;
+  return nextSongPosition;
 };
 
 export const isCurrentSong = (song: Song): boolean => {
-  return song.isCurrent;
+  const isCurrent = song.isCurrent;
+
+  return isCurrent;
 };
