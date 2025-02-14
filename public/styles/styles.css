@@ -84,7 +84,7 @@ h1 {
   align-items: center;
 }
 
-.current-song__title {
+.song-data__title {
   margin-top: 30px;
   font-size: 1.2rem;
   color: #f500b7;
