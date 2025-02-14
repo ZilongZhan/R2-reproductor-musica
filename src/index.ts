@@ -19,12 +19,16 @@ const songsList = document.querySelector(".songs");
 const errorBox = document.querySelector(".error");
 const totalBox = document.querySelector(".total");
 const player = document.querySelector(".player") as HTMLAudioElement;
-const currentSongTitle = document.querySelector(".current-song__title");
+const currentSongTitle = document.querySelector(".song-data__title");
+const currentSongDuration = document.querySelector(".song-data__duration");
+const currentSongCredits = document.querySelector(".song-data__credits");
 
 const urlBase = "https://refactorproject.s3.eu-north-1.amazonaws.com/mp3/";
 
 if (
   !currentSongTitle ||
+  !currentSongDuration ||
+  !currentSongCredits ||
   !newSongForm ||
   !newSongTitle ||
   !songsList ||
@@ -111,16 +115,20 @@ const hydrateButtons = (): void => {
   });
 };
 
-const playSong = ({ title }: Song): void => {
+const playSong = ({ title, durationInSeconds, credits }: Song): void => {
   player.src = `${urlBase}${title}`;
   player.play();
   currentSongTitle.textContent = title;
+  currentSongDuration.textContent = `${durationInSeconds.toString()}s`;
+  currentSongCredits.textContent = credits;
 };
 
 const stopSong = (): void => {
   player.pause();
   player.src = "";
   currentSongTitle.textContent = "";
+  currentSongDuration.textContent = "";
+  currentSongCredits.textContent = "";
 };
 
 const showError = (message: string): void => {
